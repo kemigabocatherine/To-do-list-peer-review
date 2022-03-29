@@ -1,6 +1,5 @@
 import { todoList } from './elements.js';
 
-const newTodos = [];
 class Todos {
   constructor() {
     this.todos = [];
@@ -42,6 +41,7 @@ class Todos {
   }
 
   checkStorage = () => {
+    const newTodos = [];
     if (window.localStorage.getItem('todos') !== null) {
       const array = JSON.parse(window.localStorage.getItem('todos'));
       for (let i = 0; i < array.length; i += 1) {
